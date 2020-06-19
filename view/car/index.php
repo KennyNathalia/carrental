@@ -32,7 +32,7 @@
 			</table>
 			
 			<a href="<?=URL?>car/details/<?php echo $row['car_id'] ?>" class="btn btn-info m-auto">Meer info</a>
-			<a class=" btn btn-primary m-auto">Nu huren</a>
+			<a href="<?=URL?>car/huren/<?php echo $row['car_id'] ?>" class=" btn btn-primary m-auto">Nu huren</a>
 		</section>
 	</div>
 	
