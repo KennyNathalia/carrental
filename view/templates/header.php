@@ -20,6 +20,6 @@
 		<img class="w-25 col-1" src="<?=URL?>public/Auto-images/CARRENTAL.png">
 		<li class="nav-item"><a class="nav-link color-green" href="<?= URL ?>home/index">Home</a></li>
 		<li class="nav-item"><a class="nav-link color-green" href="<?= URL ?>car/index">Auto's</a></li>
-		<li class="nav-item"><a class="nav-link color-green" href="<?= URL ?>paarden/index">Paarden</a></li>
+		<li class="nav-item"><a class="nav-link color-green" href="<?= URL ?>contact/index">Contact</a></li>
 	</ul>
 	</nav>
