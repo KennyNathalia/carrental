@@ -4,14 +4,14 @@
   <div class="container-fluid text-center text-md-left">
 
     <!-- Grid row -->
-    <div class="row">
+    <div class="row d-flex justify-content-around">
 
       <!-- Grid column -->
-      <div class="col-md-6 mt-md-0 mt-3">
+      <div class="">
 
         <!-- Content -->
-        <h5 class="text-uppercase">Footer Content</h5>
-        <p>Here you can use rows and columns to organize your footer content.</p>
+        <h5 class="text-uppercase color-blue ">Footer Content</h5>
+        <p class="text-center">We rent cars!</p>
 
       </div>
       <!-- Grid column -->
@@ -19,10 +19,10 @@
       <hr class="clearfix w-100 d-md-none pb-3">
 
       <!-- Grid column -->
-      <div class="col-md-6">
+      <div class="">
 
         <!-- Links -->
-        <h5 class="text-uppercase">Links</h5>
+        <h5 class="text-uppercase color-blue">Pagina's</h5>
 
         <ul class="list-unstyled">
           <li>

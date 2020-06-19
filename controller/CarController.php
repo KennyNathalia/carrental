@@ -15,7 +15,9 @@ function details($id)
 	));
 }
 
-function delete()
+function huren($id)
 {
-	render("paarden/delete");
+	render("car/huren", array(
+		'carbyid' => getCarsByID($id)
+	));
 }
