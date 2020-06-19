@@ -10,7 +10,7 @@
 		<h3 class="font-weight-bold m-3 col-12 color-blue"><?php echo $row['merknaam'] ?> <?php echo $row['modelnaam'] ?></h3>
 		<img class="w-50 m-3" src="<?=URL?>public/Auto-images/<?php echo $row['img'] ?>">
 		</section>
-		<section class="col-2 mb-5">
+		<section class="col-3 mb-5">
 			<h2 class="mt-5 mb-3">€<?php $number= $row['prijs']; echo number_format($number, 0, ',','.'); ?>,-</h2>
 			<p>Huurprijs (per dag): €<?php $huur = $row['prijs'] * 0.002; echo number_format($huur, 0, ',','.');?>,- </p>
 			
@@ -31,8 +31,9 @@
 				</tbody>
 			</table>
 			
-			<a href="<?=URL?>car/details/<?php echo $row['car_id'] ?>" class="btn btn-info m-auto">Meer info</a>
-			<a href="<?=URL?>car/huren/<?php echo $row['car_id'] ?>" class=" btn btn-primary m-auto">Nu huren</a>
+			<a href="<?=URL?>car/details/<?php echo $row['car_id'] ?>" class="btn btn-outline-info m-auto">Meer info</a>
+			<a href="<?=URL?>car/huren/<?php echo $row['car_id'] ?>" class=" btn btn-outline-primary m-auto">Nu huren</a>
+			<a href="<?=URL?>car/kopen/<?php echo $row['car_id'] ?>" class=" btn btn-outline-success m-auto">Nu kopen</a>
 		</section>
 	</div>
 	
