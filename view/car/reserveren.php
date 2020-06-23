@@ -2,7 +2,8 @@
   $datum = explode( '-', $_POST['daterange']);
   $datum[0] = str_replace(' ', '', $datum[0]);
   $datum[1] = str_replace(' ', '', $datum[1]);
-
+  $_POST['startDatum'] = $datum[0];
+  $_POST['eindDatum'] = $datum[1];
 ?>
 <h2 class="text-center color-blue"><?php echo $carbyid['merknaam']?> <?php echo $carbyid['modelnaam']?></h2>
 <div class="d-flex justify-content-center mt-5 ">
@@ -20,23 +21,28 @@
             </tr>
             <tr>
                 <td class="font-weight-bold">Ophaal datum:</td>
-                <td></td>
+                <td><?php echo $datum[0] ?></td>
             </tr>
             <tr>
                 <td class="font-weight-bold">Inlever datum:</td>
-                <td></td>
+                <td><?php echo $datum[1] ?></td>
             </tr>
             <tr>
                 <td class="font-weight-bold">Prijs:</td>
                 <td> €<?php echo $_POST['price'] ?></td>
             </tr>
-      
+
            
         </tbody>
       </table>
     	
+        
+        <button class="d-block m-auto" >Reserveren </button>
+
+
       
-      <input class="d-block m-auto" type="submit" name="" value="reserveren">
+      
+      
      
     
 	</section>

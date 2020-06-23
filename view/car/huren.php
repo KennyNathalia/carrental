@@ -22,7 +22,8 @@
             </div>
         </div>  
       </div>
-  
+      <input type="hidden" name="startDatum" value="" >
+      <input type="hidden" name="eindDatum" value="">
       <input class="d-block m-auto" type="submit" name="" value="verder">
       <p><?php echo $_POST['daterange'] ?></p>
     </form>
@@ -45,7 +46,7 @@ var huur = "<?php echo $huur ?>";
         // You can use diff() method to calculate the day difference.
         $('#numberdays').val(picker.endDate.diff(picker.startDate, "days")+1);
         
-        $('#price').val((picker.endDate.diff(picker.startDate, "days")+1)*huur);
+        $('#price').val(Number((picker.endDate.diff(picker.startDate, "days")+1)*huur).toFixed(2));
     });
 });
 
