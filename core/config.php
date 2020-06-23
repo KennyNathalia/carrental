@@ -2,10 +2,10 @@
 
 // Database instellingen
 define('DB_TYPE', 'mysql');		// Wat voor type database gebruik je?
-define('DB_HOST', '127.0.0.1'); // Wat is het IP adres van de server (127.0.0.1 is de lokae machine)
-define('DB_NAME', 'carrental'); // Wat is de database naam
-define('DB_USER', 'root'); 		// Wat is de database gebruiker
-define('DB_PASS', 'mysql');			// Wat is het database wachtwoord
+define('DB_HOST', 'web0099.zxcs.nl'); // Wat is het IP adres van de server (127.0.0.1 is de lokae machine)
+define('DB_NAME', 'u67669p64404_Carrental'); // Wat is de database naam
+define('DB_USER', 'u67669p64404_Carrental'); 		// Wat is de database gebruiker
+define('DB_PASS', 'zEzGHxlhY');			// Wat is het database wachtwoord
 define('DB_CHARSET', 'utf8'); 	// Welke karakterset wordt gebruikt
 
 define('URL_PUBLIC_FOLDER', 'public');	// De public folder is de folder waar alle bestanden in staan die via de adresbalk direct aangevraagd kunnen worden, denk aan CSS, JS, afbeeldingen etc...
