@@ -40,7 +40,7 @@
 			</table>
 			
 			
-			<button class=" btn btn-primary m-auto">Nu huren</button>
+			<a href="<?=URL?>car/huren/<?php echo $row['car_id'] ?>" class="btn btn-outline-primary m-auto">Nu huren</a>
 		</section>
 	</div>
 	
