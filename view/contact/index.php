@@ -1,37 +1,19 @@
-<div class="container">
-	<div class="row">
-		<div class="col-12 form-group has-feedback">
-			<label>From <span class="text-danger">*</span></label>
-			<input type="text" class="form-control has-feedback-left" id="daterange" 				 name="daterange">
-		</div>
-		<div class="col-12 form-group has-feedback">
-			<label>Number of days <span class="text-danger">*</span></label>
-			<input type="text" class="form-control has-feedback-left" name="numberdays" 
-				   id="numberdays" disabled>
-		</div>
-	</div>  
-</div>
+<div container>
+    <div class="col-12">
+          <h3 class="text-center">Heeft u problemen met uw auto/reservering?</h3><br>
+          <p class="text-center pb-3">Dan kunt u contact opnemen via het volgende:</p>
+    </div>
 
-<script>
-	$(function() {
-    $('#daterange').daterangepicker({
-    minDate: new Date()	
-    });
     
-    $('#daterange').on('apply.daterangepicker', function(ev, picker) {
-        // picker.startDate and picker.endDate are already Moment.js objects.
-        // You can use diff() method to calculate the day difference.
-        $('#numberdays').val(picker.endDate.diff(picker.startDate, "days"));
-    });
-});
+      <div class="col-6">
+            <p>Voor problemen met uw auto kunt u bellen naar:</p>
+        <div class="icons row">
+            <i class="fas fa-phone-alt"></i><p>+31 0612345678</p>
+        </div>
+          <p>Voor problemen met uw reservering kunt u bellen naar:</p>
+        <div class="icons row">
+            <i class="fas fa-phone-alt"></i><p>+31 0687654321</p>
+        </div>
+      </div>
 
-var d = new Date();
-           var currMonth = d.getMonth();
-           var currYear = d.getFullYear();
-           var startDate = new Date(currYear, currMonth, 1);
-
-           $("#datepicker").daterangepicker();
-           $("#datepicker").daterangepicker("setDate", startDate);
-
-
-</script>
+</div>
