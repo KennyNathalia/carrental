@@ -17,3 +17,12 @@
 	width: 12rem;
 	text-align: center;
 }
+
+.opacity{
+	opacity: 0.7;
+}
+
+i{
+	padding: 20px;
+	font-size: 30px;
+}
