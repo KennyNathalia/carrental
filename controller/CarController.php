@@ -28,3 +28,10 @@ function kopen($id)
 		'carbyid' => getCarsByID($id)
 	));
 }
+
+function reserveren($id)
+{
+	render("car/reserveren", array(
+		'carbyid' => getCarsByID($id)
+	));
+}

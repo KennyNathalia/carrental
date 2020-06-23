@@ -32,7 +32,7 @@
             <a href="<?= URL ?>car/index">Auto's</a>
           </li>
           <li>
-            <a href="#!">Link 3</a>
+            <a href="<?= URL ?>contact/index">Contact</a>
           </li>
           <li>
             <a href="#!">Link 4</a>
@@ -53,7 +53,7 @@
   <!-- Footer Links -->
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright -
+  <div class="footer-copyright text-center py-3">© 2020 Rick, Kenny, Bartek -
     CarRental
   </div>
  
