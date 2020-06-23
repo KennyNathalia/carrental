@@ -22,5 +22,6 @@
 		<li class="nav-item"><a class="nav-link color-green" href="<?= URL ?>home/index">Home</a></li>
 		<li class="nav-item"><a class="nav-link color-green" href="<?= URL ?>car/index">Auto's</a></li>
 		<li class="nav-item"><a class="nav-link color-green" href="<?= URL ?>contact/index">Contact</a></li>
+		<li class="nav-item"><a class="nav-link color-green" href="<?= URL ?>user/register">Registreren</a></li>
 	</ul>
 	</nav>
