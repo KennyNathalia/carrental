@@ -25,3 +25,4 @@ function getCarsByID($id)
 
 	return $query->fetch();
 }
+
