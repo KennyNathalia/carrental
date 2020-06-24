@@ -2,7 +2,7 @@
 <div class="d-flex justify-content-center mt-5 ">
   <section class="d-block">
     <p class="text-center">Huurprijs (per dag): €<?php $huur = $carbyid['prijs'] * 0.002; echo number_format($huur, 2, ',','.');?> </p>
-    <form action="<?=URL?>car/reserveren/<?php echo $carbyid['car_id'] ?>" method="POST">
+    <form action="<?=URL?>car/validation/<?php echo $carbyid['car_id'] ?>" method="POST">
     	<div class="container">
         <div class="row">
             <div class="col-12 form-group has-feedback">
@@ -24,6 +24,8 @@
       </div>
       <input type="hidden" name="startDatum" value="" >
       <input type="hidden" name="eindDatum" value="">
+
+      <p class="text-center text-danger"><?php session_start(); echo $_SESSION['error']; ?></p>
       <input class="d-block m-auto" type="submit" name="" value="verder">
       <p><?php echo $_POST['daterange'] ?></p>
     </form>
@@ -60,3 +62,4 @@ var d = new Date();
 
 
 </script>
+
