@@ -1,4 +1,9 @@
 <?php
+session_start();
+$_POST['daterange'] = $_SESSION['daterange'];
+$_POST['numberdays'] = $_SESSION['numberdays'];
+$_POST['price'] = $_SESSION['price']; 
+
   $datum = explode( '-', $_POST['daterange']);
   $datum[0] = str_replace(' ', '', $datum[0]);
   $datum[1] = str_replace(' ', '', $datum[1]);
@@ -40,7 +45,7 @@
         <button class="d-block m-auto" >Reserveren </button>
 
 
-      
+ 
       
       
      

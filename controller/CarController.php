@@ -35,3 +35,15 @@ function reserveren($id)
 		'carbyid' => getCarsByID($id)
 	));
 }
+
+function create()
+{
+	 header("location: ".URL."car/index");
+}
+
+function validation($id){
+	render("car/validation", array(
+		'carbyid' => getCarsByID($id)
+	));
+
+}

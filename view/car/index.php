@@ -36,8 +36,11 @@
 			<a href="<?=URL?>car/kopen/<?php echo $row['car_id'] ?>" class=" btn btn-outline-success m-auto">Nu kopen</a>
 		</section>
 	</div>
-	
 
-<?php } ?>
+
+<?php }
+session_start();
+$_SESSION['error'] = "";
+ ?>
 
 </div>
