@@ -4,7 +4,7 @@
           <p class="text-center pb-3">Dan kunt u contact opnemen via het volgende:</p>
     </div>
 
-    
+
       <div class="col-6">
             <p>Voor problemen met uw auto kunt u bellen naar:</p>
         <div class="icons row">
