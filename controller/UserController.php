@@ -2,6 +2,12 @@
 
 require(ROOT . "model/UserModel.php");
 
+function index()
+{
+	render("user/index", array(
+		'users' => getAllUsers()));
+}
+
 function register()
 {
 	render("user/register");
@@ -21,11 +27,6 @@ function verify()
 	header("location: ".URL."home/$succes");
 }
 
-function index()
-{
-	render("user/index", array(
-		'users' => getAllUsers()));
-}
 
 function saveuser() 
 {
