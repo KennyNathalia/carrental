@@ -4,7 +4,7 @@ $_SESSION['error'] = "";
 ?>
 <div class="col-10 m-auto">
 <h1 class="text-center mt-3 color-blue">Auto overzicht</h1>
-<p class="text-center">Op deze pagina kunt u ons overzicht zien van onze huur- en koopauto's!</p>
+<p class="text-center">Op deze pagina kunt u ons overzicht zien van onze huurauto's!</p>
 
 
 <h1 class="ml-5 color-blue">Auto lijst</h1>
@@ -37,7 +37,6 @@ $_SESSION['error'] = "";
 			
 			<a href="<?=URL?>car/details/<?php echo $row['car_id'] ?>" class="btn btn-outline-info m-auto">Informatie</a>
 			<a href="<?=URL?>car/huren/<?php echo $row['car_id'] ?>" class=" btn btn-outline-primary m-auto">Nu huren</a>
-			<a href="<?=URL?>car/kopen/<?php echo $row['car_id'] ?>" class=" btn btn-outline-success m-auto">Nu kopen</a>
 		</section>
 	</div>
 

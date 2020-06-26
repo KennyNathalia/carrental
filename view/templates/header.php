@@ -23,11 +23,19 @@
 			<li class="nav-item"><a class="nav-link color-green" href="<?= URL ?>home/index">Home</a></li>
 			<li class="nav-item"><a class="nav-link color-green" href="<?= URL ?>car/index">Auto's</a></li>
 			<li class="nav-item"><a class="nav-link color-green" href="<?= URL ?>contact/index">Contact</a></li>
-			<li class="nav-item"><a class="nav-link color-green" href="<?= URL ?>user/register">Registreren</a></li>
+			<li class="nav-item"><a class="nav-link color-green" href="<?= URL ?>">Reserveringen</a></li>
 		</div>
 		<div  class="col-2 d-flex align-items-end">
-			<a href="" class="color-green"><i class="fas fa-user p-0  d-block text-center"></i><span class="d-flex align-items-center"> <?php $gebruiker = "Gebruiker";
-			echo $gebruiker; ?></span></a>
+			<?php session_start();
+				  $gebruiker = $_SESSION["user"];
+			?>
+			<a <?php if(!isset($gebruiker)){ echo' href="'.URL.'user/index" '; }else{ echo' href="'.URL.'user/detail" '; }?> class="color-green"><i class="fas fa-user p-0  d-block text-center"></i><span class="d-flex align-items-center"> <?php  
+			if(isset($gebruiker)){
+				echo $gebruiker;
+			} else{
+				echo "Log in";
+			}
+				 ?></span></a>
 		</div>
 	</ul>
 	</nav>
