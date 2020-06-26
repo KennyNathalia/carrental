@@ -23,8 +23,26 @@ function verify()
 	$username = $_POST["username"];
     $password = $_POST["password"];
 	$succes = user($username, $password);
+	var_dump($succes);
+	session_start();
+	var_dump($username);
+	var_dump($password);
+	$gebr = $_SESSION['gebr'];
+	$ww = $_SESSION['ww'];
+	var_dump($gebr);
+	var_dump($ww);
 
-	header("location: ".URL."home/$succes");
+	if($username == $succes["username"]){
+		echo "gebruikersnaam juist";
+		if($password === $succes["password"]){
+			header("location: ".URL."home/index/$succes");	
+		} else{
+			echo "wachtwoord onjuist";
+		}
+	} else {
+		echo "gebruikersnaam onjuist";
+	}
+	
 }
 
 
