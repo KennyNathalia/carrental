@@ -30,7 +30,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 	if($valid == 1){
 		$_SESSION['error'] = "";
-		header("location: ".URL."car/reserveren/".$carbyid['car_id']);
+		if(isset($gebruiker)){
+			header("location: ".URL."car/reserveren/".$carbyid['car_id']);
+		} else{
+			$_SESSION['error'] = "Log eerst in, of maak een account aan";	
+			header("location: ".URL."car/huren/".$carbyid['car_id']);
+		}
+		
 		
 	}
 }

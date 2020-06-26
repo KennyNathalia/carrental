@@ -20,13 +20,13 @@
 //}
 
 
+
 ?>
+	
 
-
-
-   <div id="main-wrapper">
-	<center><h2 class="color-blue">INLOGGEN</h2></center>	
-	   <form action="<?=URL?>user/verify" method="post">
+	<div id="main-wrapper">
+		<center><h2 class="color-blue">INLOGGEN</h2></center>	
+	    <form action="<?=URL?>user/verify" method="post">
 			<div class="text-center m-5">
 				<label><b>Gebruikersnaam</b></label>
 				<input type="text" placeholder="Voer uw gebruikersnaam in" name="username" required>
@@ -35,7 +35,7 @@
 				<input type="password" placeholder="Voer uw wachtwoord in" name="password" required>
 			<div class="text-center m-2">
 				<button class="login_button" name="login" type="submit">INLOGGEN</button>
-				<a class='d-block' href="<?=URL?>user/register">Nog geen account? Registreer je!</a>
+				<a class="d-block" href="<?=URL?>user/register">Nog geen account? Registreer je!</a>
 			</div>
 		</form>
 	</div>

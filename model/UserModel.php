@@ -49,3 +49,9 @@ function getAllUsers()
 
 	return $query->fetch();
 }
+
+function userLogout()
+{
+	session_start();
+	unset($_SESSION['user']);
+}
