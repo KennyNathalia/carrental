@@ -16,7 +16,11 @@ $_POST['price'] = $_SESSION['price'];
 
     <table class="table">
         <tbody>
-           <tr>
+            <tr>
+                <td class="font-weight-bold">Naam:</td>
+                <td><?php echo $_SESSION['user'] ?></td>
+            </tr>
+            <tr>
                 <td class="font-weight-bold">Datum:</td>
                 <td><?php echo $_POST['daterange'] ?></td>
             </tr>
@@ -40,15 +44,19 @@ $_POST['price'] = $_SESSION['price'];
            
         </tbody>
       </table>
-    	
+      <a  class="btn btn-outline-info m-auto" href="<?= URL ?>car/create">Reserveren</a>
+      <?php
+          $_SESSION['carid'] = $carbyid['car_id'];  
+          $_SESSION['van'] = date("Y-m-d", strtotime($datum[0])); 
+          $_SESSION['tot'] = date("Y-m-d", strtotime($datum[1]));  
         
-        <button class="d-block m-auto" >Reserveren </button>
+        
 
 
  
       
       
      
-    
+    ?>
 	</section>
 </div>

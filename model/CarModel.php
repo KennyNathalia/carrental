@@ -26,3 +26,22 @@ function getCarsByID($id)
 	return $query->fetch();
 }
 
+function addReservering() 
+{
+	$db = openDatabaseConnection();
+
+	$sql = "INSERT INTO reservering (car_id, van, tot, username) VALUES (:car_id, :van , :tot, :username)";
+	$query = $db->prepare($sql);
+	session_start();
+	$query->bindParam(':car_id', $_SESSION['carid']  );
+	$query->bindParam(':van', $_SESSION['van']  );
+	$query->bindParam(':tot', $_SESSION['tot']  );
+	$query->bindParam(':username', $_SESSION['user']  );
+	$query->execute();
+
+	$db = null;
+
+	
+}
+
+

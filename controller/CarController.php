@@ -38,7 +38,8 @@ function reserveren($id)
 
 function create()
 {
-	 header("location: ".URL."car/index");
+	addReservering();
+	header("location: ".URL."car/index");
 }
 
 function validation($id){
