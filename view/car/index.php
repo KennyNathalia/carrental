@@ -1,3 +1,7 @@
+<?php session_start();
+$_SESSION['error'] = "";
+
+?>
 <div class="col-10 m-auto">
 <h1 class="text-center mt-3 color-blue">Auto overzicht</h1>
 <p class="text-center">Op deze pagina kunt u ons overzicht zien van onze huur- en koopauto's!</p>
@@ -39,8 +43,7 @@
 
 
 <?php }
-session_start();
-$_SESSION['error'] = "";
+
  ?>
 
 </div>
