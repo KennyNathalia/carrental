@@ -12,17 +12,29 @@ function createUser($username, $password){
 
 function user($username, $password){
 	$conn = openDatabaseConnection();
-	$statement = $dbh->prepare("SELECT username from users where username = :username");
+	$statement = $conn->prepare("SELECT username, password from users where username = :username");
 	$statement->bindParam(":username", $username);
-    //$statement->bindParam(":password", $password);
 	$statement->execute();
-
+	
+	
+	
+	return $statement->fetch();
 	$conn = null;
-
-	if($statement->rowCount() > 0)
-	{
-	  	return "user has been found!";
-	}
+	// if($statement->rowCount() > 0)
+	// {
+	//   	$gebr = true;
+	//   	if($password == $statement["password"])
+	// 	{
+	//   		$ww = true;
+	// 	} else {	
+	// 		$ww = false;
+	// 	}
+	// } else{
+	// 	$gebr = false;
+	// }
+	// session_start();
+	// $_SESSION['gebr'] = $gebr;
+	// $_SESSION['ww'] = $ww;
 }
 
 
