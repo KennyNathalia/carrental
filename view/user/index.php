@@ -29,11 +29,12 @@
 	    <form action="<?=URL?>user/verify" method="post">
 			<div class="text-center m-5">
 				<label><b>Gebruikersnaam</b></label>
-				<input type="text" placeholder="Voer uw gebruikersnaam in" name="username" required>
+				<input type="text" placeholder="Voer uw gebruikersnaam in" name="username">
 			<div class="text-center m-1">
 				<label><b>Wachtwoord</b></label>
-				<input type="password" placeholder="Voer uw wachtwoord in" name="password" required>
+				<input type="password" placeholder="Voer uw wachtwoord in" name="password">
 			<div class="text-center m-2">
+				<p class="text-center text-danger"><?php session_start(); echo $_SESSION['loginerror'];?></p>
 				<button class="login_button" name="login" type="submit">INLOGGEN</button>
 				<a class="d-block" href="<?=URL?>user/register">Nog geen account? Registreer je!</a>
 			</div>

@@ -10,6 +10,7 @@ function index()
 
 function register()
 {
+
 	render("user/register");
 }
 
@@ -27,34 +28,110 @@ function verify()
 	session_start();
 	var_dump($username);
 	var_dump($password);
-	$gebr = $_SESSION['gebr'];
-	$ww = $_SESSION['ww'];
 
-	var_dump($gebr);
-	var_dump($ww);
 
-	if($username == $succes["username"]){
-		echo "gebruikersnaam juist";
-		if($password === $succes["password"]){
-			$_SESSION["user"] = $username;
-			header("location: ".URL."home/index/$succes");	
-		} else{
-			echo "wachtwoord onjuist";
+	$fields = ["username","password"];
+
+	$class = [];
+	$data = [];
+	$class["username"] = $data["username"] = "";
+	$class["password"] = $data["password"] = "";
+
+	if($_SERVER["REQUEST_METHOD"] == "POST"){
+		$valid = 1;
+
+		foreach($fields as $field){
+			$_POST[$field] = trim($_POST[$field]);
+			$_POST[$field] = stripslashes($_POST[$field]);
+			$_POST[$field] = htmlspecialchars($_POST[$field]);
+			if(isset($_POST[$field]) && empty($_POST[$field])){
+				$class[$field] = "is-invalid";
+				$valid = 0;
+				$_SESSION['loginerror'] = "*Vull alle velden in";
+				header("location: ".URL."user/index");
+
+			}
+			 else {
+				$data[$field] = $_POST[$field];
+			}
+
 		}
-	} else {
-		echo "gebruikersnaam onjuist";
+
+		if($valid == 1){
+			$_SESSION['loginerror'] = "";
+			if($username == $succes["username"]){
+				if($password === $succes["password"]){
+					$_SESSION["user"] = $username;
+					header("location: ".URL."home/index/$succes");	
+				} else{
+					$_SESSION['loginerror'] = "*Wachtwoord onjuist";
+					header("location: ".URL."user/index");
+				}
+			} else {
+				$_SESSION['loginerror'] = "*Gebruikersnaam onjuist";
+				header("location: ".URL."user/index");
+			}
+			
+		}
 	}
+			
 	
 }
 
 
 function saveuser() 
 {
+	session_start();
 	$username = $_POST["username"];
     $password = $_POST["password"];
-    createUser($username, $password);
+    $check = checkUser($username);
 
-	header("location: ".URL."user/login");//redirect to login/home (registration succesful)
+    $fields = ["username","password"];
+
+	$class = [];
+	$data = [];
+	$class["username"] = $data["username"] = "";
+	$class["password"] = $data["password"] = "";
+
+	if($_SERVER["REQUEST_METHOD"] == "POST"){
+		$valid = 1;
+
+		foreach($fields as $field){
+			$_POST[$field] = trim($_POST[$field]);
+			$_POST[$field] = stripslashes($_POST[$field]);
+			$_POST[$field] = htmlspecialchars($_POST[$field]);
+			if(isset($_POST[$field]) && empty($_POST[$field])){
+				$class[$field] = "is-invalid";
+				$valid = 0;
+				$_SESSION['regerror'] = "*Vull alle velden in";
+				header("location: ".URL."user/register");
+
+			}
+			 else {
+				$data[$field] = $_POST[$field];
+			}
+
+		}
+
+		if($valid == 1){
+			$_SESSION['regerror'] = "";
+			if($check == false){
+				createUser($username, $password);
+				header("location: ".URL."user/index");
+	
+			} else {
+				var_dump($check);
+	
+				$_SESSION['regerror'] = "*Deze gebruikersnaam is al in gebruik.";
+				header("location: ".URL."user/register");
+
+   			}
+			
+		}
+	}
+   
+	
+	//redirect to login/home (registration succesful)
 }
 
 function detail()
