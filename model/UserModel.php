@@ -1,5 +1,14 @@
 <?php
 
+function checkUser($username){
+	$conn = openDatabaseConnection();
+	$statement = $conn->prepare("SELECT username from users where username = :username");
+  	$statement->bindParam(":username", $username);
+  	$statement->execute();
+	return $statement->fetch();
+  	$conn= null;
+}
+
 function createUser($username, $password){
   $conn = openDatabaseConnection();
   $statement = $conn->prepare("INSERT INTO users (username, password) VALUES (:username, :password)");
