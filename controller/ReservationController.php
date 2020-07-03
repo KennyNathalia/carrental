@@ -39,8 +39,8 @@ function update($id){
 	header("location:". URL. "reservation/index");
 }
 
-function validation($id){
+function validation($id, $carid){
 	render("reservation/validation", array(
-		'resId' => reservationById($id)
+		'resId' => reservationById($id), 'carbyid' => getCarsByID($carid)
 	));
 }
