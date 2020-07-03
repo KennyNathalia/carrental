@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>CarRental</title>	
 	<link rel="stylesheet" type="text/css" href="<?=URL?>css/style.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -16,26 +17,29 @@
 	<script src="https://kit.fontawesome.com/970adb2e15.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<nav>
-	<ul class="row col-10 m-auto nav nav-tabs ">
-		<div class="col-10 row d-flex align-items-end">
-			<img class="w-25 col-1" src="<?=URL?>public/Auto-images/CARRENTAL.png">
-			<li class="nav-item"><a class="nav-link color-green" href="<?= URL ?>home/index">Home</a></li>
-			<li class="nav-item"><a class="nav-link color-green" href="<?= URL ?>car/index">Auto's</a></li>
-			<li class="nav-item"><a class="nav-link color-green" href="<?= URL ?>contact/index">Contact</a></li>
-			<li class="nav-item"><a class="nav-link color-green" href="<?= URL ?>reservation/index">Reserveringen</a></li>
-		</div>
-		<div  class="col-2 d-flex align-items-end">
-			<?php session_start();
-				  $gebruiker = $_SESSION["user"];
-			?>
-			<a <?php if(!isset($gebruiker)){ echo' href="'.URL.'user/index" '; }else{ echo' href="'.URL.'user/detail" '; }?> class="color-green"><i class="fas fa-user p-0  d-block text-center"></i><span class="d-flex align-items-center"> <?php  
-			if(isset($gebruiker)){
-				echo $gebruiker;
-			} else{
-				echo "Log in";
-			}
-				 ?></span></a>
-		</div>
-	</ul>
+	<nav class="col-lg-10 col-sm-12 m-auto">
+		<ul class="row m-auto nav nav-tabs justify-content-center">
+		
+			<div class="col-lg-10 col-sm-12 row d-flex align-items-end justify-content-center">
+				<img class="col-4 col-lg-1 col-sm-2 col-md-2 col-xl-1" src="<?=URL?>public/Auto-images/CARRENTAL.png">
+				<li class="nav-item col-lg-2 col-sm-12 text-center"><a class="nav-link color-green" href="<?= URL ?>home/index">Home</a></li>
+				<li class="nav-item col-lg-2 col-sm-12 text-center"><a class="nav-link color-green" href="<?= URL ?>car/index">Auto's</a></li>
+				<li class="nav-item col-lg-2 col-sm-12 text-center"><a class="nav-link color-green" href="<?= URL ?>contact/index">Contact</a></li>
+				<li class="nav-item col-lg-2 col-sm-12 text-center"><a class="nav-link color-green" href="<?= URL ?>reservation/index">Reserveringen</a></li>
+
+			</div>
+			<div  class="col-lg-2 col-sm-12 d-flex align-items-end text-center justify-content-center">
+				<?php session_start();
+					  $gebruiker = $_SESSION["user"];
+				?>
+				<a <?php if(!isset($gebruiker)){ echo' href="'.URL.'user/index" '; }else{ echo' href="'.URL.'user/detail" '; }?> class="color-green"><i class="fas fa-user p-0  d-block text-center"></i><span class="d-flex align-items-center"> <?php  
+				if(isset($gebruiker)){
+					echo $gebruiker;
+				} else{
+					echo "Log in";
+				}
+					 ?></span></a>
+			</div>
+
+		</ul>
 	</nav>

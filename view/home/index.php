@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="col-12">
-		<h1 class="text-center color-blue">De nieuwe Tesla Model 3</h1>
+		<h2 class="text-center color-blue">De nieuwe Tesla Model 3</h2>
 		<h4 class="text-center color-blue">Nu beschikbaar in onze catalogus!</h4>
  
 		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -30,7 +30,7 @@
 	</div>
 
 	<div class="opacity col-12 background-color text-white pb-3">
-		<h1 class="text-center p-3">Wie zijn wij?</h1>
+		<h2 class="text-center p-3">Wie zijn wij?</h2>
 		<p class="text-center">CarRental is opgesticht in 2020 en ze begonnen maar met een paar automerken. Door onze prijzen zijn wij nu een
 		van de beste autoverhuurders ter wereld. Met merken zoals: BMW en Tesla groeide ons bedrijf tot wat het nu is.
 		</p><br>
@@ -44,7 +44,7 @@
 
 	<div class="col-12 mt-3">
 		<h4 class="text-center">Vind ons ook op:</h4>
-		<div class="d-flex justify-content-lg-center">
+		<div class="d-flex justify-content-center">
 			<i class="fab fa-facebook-square"></i>
 			<i class="fab fa-twitter"></i>
 			<i class="fab fa-instagram"></i>
