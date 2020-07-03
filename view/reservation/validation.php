@@ -30,7 +30,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			$class[$field] = "is-invalid";
 			$valid = 0;
 			$_SESSION['editerror'] = "*Voer eerst een datum in";
-			header("location: ".URL."car/huren/".$carbyid['car_id']);
+			header("location: ".URL."reservation/edit/".$resId['res_id']."/".$carbyid['car_id']);
 
 		}
 		 else {

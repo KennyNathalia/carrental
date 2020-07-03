@@ -1,5 +1,6 @@
 <h1 class = "text-center color-blue">Pas je reservering aan:</h1>
-<form action="<?=URL?>reservation/validation/<?php echo $resId['res_id']; ?>" method="POST">
+<?php var_dump($resId['res_id']); ?>
+<form action="<?=URL?>reservation/validation/<?php echo $resId['res_id']?>/<?php echo $carbyid['car_id'] ?>" method="POST">
 	<div class="container">
         <div class="row">
             <div class="col-12 form-group has-feedback">
@@ -21,6 +22,7 @@
             </div>
         </div>  
     </div>
+    <p class="text-center text-danger"><?php session_start(); echo $_SESSION['editerror']; ?></p>
     <input class="d-block m-auto btn btn-primary" type="submit" name="" value="Aanpassen">
 </form>
 <script>
