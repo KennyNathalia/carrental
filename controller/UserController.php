@@ -16,7 +16,7 @@ function register()
 
 function login()
 {
-	render("user/login");
+	render("user/index");
 }
 
 function verify()
@@ -84,6 +84,7 @@ function saveuser()
 	session_start();
 	$username = $_POST["username"];
     $password = $_POST["password"];
+
     $check = checkUser($username);
 
     $fields = ["username","password"];

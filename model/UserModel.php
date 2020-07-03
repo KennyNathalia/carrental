@@ -16,7 +16,13 @@ function createUser($username, $password){
   $statement->bindParam(":password", $password);
   $statement->execute();
 
-  $conn = null;
+  $sql_u = "SELECT * FROM users WHERE username='$username'";
+  $res_u = mysqli_query($conn, $sql_u);
+
+  	if (mysqli_num_rows($res_u) > 0) {
+  	  $name_error = "Sorry... username already taken"; 		
+  	}
+
 }
 
 function user($username, $password){
@@ -24,6 +30,7 @@ function user($username, $password){
 	$statement = $conn->prepare("SELECT username, password from users where username = :username");
 	$statement->bindParam(":username", $username);
 	$statement->execute();
+
 	
 	
 	

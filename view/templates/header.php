@@ -23,7 +23,7 @@
 			<li class="nav-item"><a class="nav-link color-green" href="<?= URL ?>home/index">Home</a></li>
 			<li class="nav-item"><a class="nav-link color-green" href="<?= URL ?>car/index">Auto's</a></li>
 			<li class="nav-item"><a class="nav-link color-green" href="<?= URL ?>contact/index">Contact</a></li>
-			<li class="nav-item"><a class="nav-link color-green" href="<?= URL ?>">Reserveringen</a></li>
+			<li class="nav-item"><a class="nav-link color-green" href="<?= URL ?>reservation/index">Reserveringen</a></li>
 		</div>
 		<div  class="col-2 d-flex align-items-end">
 			<?php session_start();
