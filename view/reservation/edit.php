@@ -22,6 +22,7 @@
         </div>  
     </div>
     <input class="d-block m-auto btn btn-primary" type="submit" name="" value="Aanpassen">
+    <?php var_dump($carbyid); ?> 
 </form>
 <script>
 var huur = "<?php echo $carbyid['huurprijs'] ?>";

@@ -23,9 +23,7 @@ function destroy($id){
 
 function edit($id, $carid){
 	render("reservation/edit",  array(
-		'resId' => reservationById($id)
-	),	array(
-		'carbyid' => getCarsById($carid)
+		'carbyid' => getCarsByID($carid),'resId' => reservationById($id)
 	));
 }
 

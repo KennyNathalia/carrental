@@ -31,7 +31,7 @@
     </form>
 	</section>
 </div> 
-
+<?php var_dump($carbyid); ?> 
 <script>
 
 
