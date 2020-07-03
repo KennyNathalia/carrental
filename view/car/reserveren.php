@@ -49,14 +49,6 @@ $_POST['price'] = $_SESSION['price'];
           $_SESSION['carid'] = $carbyid['car_id'];  
           $_SESSION['van'] = date("Y-m-d", strtotime($datum[0])); 
           $_SESSION['tot'] = date("Y-m-d", strtotime($datum[1]));  
-        
-        
-
-
- 
-      
-      
-     
     ?>
 	</section>
 </div>
