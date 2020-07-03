@@ -10,8 +10,14 @@
       <div class="">
 
         <!-- Content -->
-        <h5 class="text-uppercase color-blue ">Footer Content</h5>
-        <p class="text-center">We rent cars!</p>
+        <h5 class="text-uppercase color-blue">Contact</h5>
+        <ul class="list-unstyled">
+          <li class="">Contact ons via:</li>
+          <li class="">Contact@carrental.nl</li>
+          <li class="">+31 0612345678</li>
+          <li class="">+31 0687654321</li>
+        </ul>
+        
 
       </div>
       <!-- Grid column -->
@@ -35,7 +41,7 @@
             <a href="<?= URL ?>contact/index">Contact</a>
           </li>
           <li>
-            <a href="<?= URL ?>user/register">Registeren</a>
+            <a href="<?= URL ?>reservation/index">Reservingen</a>
           </li>
         </ul>
 

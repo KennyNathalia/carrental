@@ -23,9 +23,7 @@ function destroy($id){
 
 function edit($id, $carid){
 	render("reservation/edit",  array(
-		'resId' => reservationById($id)
-	),	array(
-		'carbyid' => getCarsById($carid)
+		'carbyid' => getCarsByID($carid),'resId' => reservationById($id)
 	));
 }
 
@@ -41,8 +39,8 @@ function update($id){
 	header("location:". URL. "reservation/index");
 }
 
-function validation($id){
+function validation($id, $carid){
 	render("reservation/validation", array(
-		'resId' => reservationById($id)
+		'resId' => reservationById($id), 'carbyid' => getCarsByID($carid)
 	));
 }
