@@ -1,13 +1,12 @@
-<h2 class="text-center color-blue"><?php echo $carbyid['merknaam']?> <?php echo $carbyid['modelnaam']?></h2>
-<div class="d-flex justify-content-center mt-5 ">
-  <section class="d-block">
-    <p class="text-center">Huurprijs (per dag): €<?php echo $carbyid['huurprijs'];?> </p>
-    <form action="<?=URL?>car/validation/<?php echo $carbyid['car_id'] ?>" method="POST">
-    	<div class="container">
+<h1 class = "text-center color-blue">Pas je reservering aan:</h1>
+<form action="<?=URL?>reservation/validation/<?php echo $resId['res_id']; ?>" method="POST">
+	<div class="container">
         <div class="row">
             <div class="col-12 form-group has-feedback">
               <label>Datum <span class="text-danger">*</span></label>
-              <input type="text" class="form-control has-feedback-left" id="daterange"         name="daterange">
+              <input type="text" class="form-control has-feedback-left" id="daterange"  name="daterange">
+              <input type="hidden" name="startDatum" value="" >
+      		  <input type="hidden" name="eindDatum" value="">
             </div>
             <div class="col-12 form-group has-feedback">
               <label>Aantal dagen <span class="text-danger">*</span></label>
@@ -21,22 +20,12 @@
                  id="price" readonly>
             </div>
         </div>  
-      </div>
-      <input type="hidden" name="startDatum" value="" >
-      <input type="hidden" name="eindDatum" value="">
-
-      <p class="text-center text-danger"><?php session_start(); echo $_SESSION['error']; ?></p>
-      <input class="d-block m-auto" type="submit" name="" value="verder">
-      <p><?php echo $_POST['daterange'] ?></p>
-    </form>
-	</section>
-</div> 
-
+    </div>
+    <input class="d-block m-auto btn btn-primary" type="submit" name="" value="Aanpassen">
+</form>
 <script>
+var huur = "<?php echo $carbyid['huurprijs'] ?>";
 
-
-
-var huur = "<?php echo $carbyid['huurprijs'] ?>"; 
 
   $(function() {
     $('#daterange').daterangepicker({
@@ -62,4 +51,3 @@ var d = new Date();
 
 
 </script>
-

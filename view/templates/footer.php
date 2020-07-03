@@ -35,7 +35,7 @@
             <a href="<?= URL ?>contact/index">Contact</a>
           </li>
           <li>
-            <a href="#!">Link 4</a>
+            <a href="<?= URL ?>user/register">Registeren</a>
           </li>
         </ul>
 

@@ -30,13 +30,14 @@ function addReservering()
 {
 	$db = openDatabaseConnection();
 
-	$sql = "INSERT INTO reservering (car_id, van, tot, username) VALUES (:car_id, :van , :tot, :username)";
+	$sql = "INSERT INTO reservering (car_id, van, tot, username, prijs_res) VALUES (:car_id, :van , :tot, :username, :price)";
 	$query = $db->prepare($sql);
 	session_start();
 	$query->bindParam(':car_id', $_SESSION['carid']  );
 	$query->bindParam(':van', $_SESSION['van']  );
 	$query->bindParam(':tot', $_SESSION['tot']  );
 	$query->bindParam(':username', $_SESSION['user']  );
+	$query->bindParam(':price', $_SESSION['price'] );
 	$query->execute();
 
 	$db = null;

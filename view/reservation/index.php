@@ -24,8 +24,13 @@
 				        <td class="font-weight-bold">Tot:</td>
 				        <td><?php echo $row['tot'] ?></td>
 				    </tr>
+				    <tr>
+				        <td class="font-weight-bold">Prijs:</td>
+				        <td>€ <?php echo $row['prijs_res'] ?>,-</td>
+				    </tr>
 				</tbody>
 			</table>
+			<a  class="btn btn-outline-info m-auto" href="<?= URL ?>reservation/edit/<?php echo $row['res_id']?>/<?php echo $row['car_id']?>">Wijzigen</a>
 			<a  class="btn btn-outline-danger m-auto" href="<?= URL ?>reservation/delete/<?php echo $row['res_id']?>">Verwijder</a>
 	</div>
 
